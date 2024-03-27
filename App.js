@@ -20,18 +20,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
-      </Text>
-      <Card>
-        <AssetExample />
-      </Card>
-    </SafeAreaView>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
