@@ -1,11 +1,25 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ScreduleDetailsScreen from './ScreduleDetails'
+import ScheduleListScreen from './ScheduleList'
+import HomeScreen from './Home'
+import FavoritesListScreen from './FavoritesList'
 
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
+const Stack = createNativeStackNavigator();
 
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
-
+export default function App() {
+  return (
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="ScheduleList" component={ScheduleListScreen} />
+    <Stack.Screen name="ScreduleDetails" component={ScreduleDetailsScreen} />
+    <Stack.Screen name="FavoritesList" component={FavoritesListScreen} />
+     </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>

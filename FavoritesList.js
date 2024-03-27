@@ -1,0 +1,1 @@
+// Fazer a FavoriteListScreen e outras paradas da página dos favoritos
