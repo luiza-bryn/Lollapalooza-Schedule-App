@@ -1,63 +1,69 @@
 [
-      {
-        "nome": "SZA",
-        "genero": "R&B",
-        "pais_origem": "Estados Unidos",
-        "descricao": "SZA é uma cantora e compositora de R&B conhecida por sua voz única e estilo inovador. Ela é reconhecida por sucessos como 'Love Galore' e 'The Weekend'.",
-        "lollapalooza": {
-          "ano_participacao": 2018,
-          "palco": "Bud Light Stage"
-        }
-      },
-      {
-        "nome": "Gilberto Gil",
-        "genero": "MPB",
-        "pais_origem": "Brasil",
-        "descricao": "Gilberto Gil é um renomado cantor, compositor e multi-instrumentista brasileiro, conhecido por sua contribuição à música popular brasileira. Ele é famoso por músicas como 'Aquele Abraço' e 'Toda Menina Baiana'.",
-        "lollapalooza": {
-          "ano_participacao": 2020,
-          "palco": "Onix Stage"
-        }
-      },
-      {
-        "nome": "Hozier",
-        "genero": "Indie Folk",
-        "pais_origem": "Irlanda",
-        "descricao": "Hozier é um cantor e compositor irlandês conhecido por sua voz poderosa e letras profundas. Ele alcançou fama internacional com o hit 'Take Me to Church' e é aclamado por álbuns como 'Hozier'.",
-        "lollapalooza": {
-          "ano_participacao": 2019,
-          "palco": "Bud Light Stage"
-        }
-      },
-      {
-        "nome": "Sam Smith",
-        "genero": "Pop",
-        "pais_origem": "Reino Unido",
-        "descricao": "Sam Smith é um cantor e compositor britânico conhecido por sua voz distintiva e emocional. Ele ganhou destaque com hits como 'Stay with Me' e 'Too Good at Goodbyes'.",
-        "lollapalooza": {
-          "ano_participacao": 2015,
-          "palco": "Samsung Stage"
-        }
-      },
-      {
-        "nome": "Lady Gaga",
-        "genero": "Pop",
-        "pais_origem": "Estados Unidos",
-        "descricao": "Lady Gaga é uma cantora, compositora e atriz americana conhecida por sua criatividade, voz poderosa e performances extravagantes. Ela é famosa por hits como 'Bad Romance' e 'Shallow'.",
-        "lollapalooza": {
-          "ano_participacao": 2007,
-          "palco": "AT&T Stage"
-        }
-      },
-      {
-        "nome": "Madonna",
-        "genero": "Pop",
-        "pais_origem": "Estados Unidos",
-        "descricao": "Madonna é uma ícone da música pop, conhecida por sua influência na cultura pop e seu estilo inovador. Ela é famosa por sucessos como 'Like a Virgin' e 'Material Girl'.",
-        "lollapalooza": {
-          "ano_participacao": 2006,
-          "palco": "AT&T Stage"
-        }
-      }
-  ]
+  {
+    "nome": "SZA",
+    "endereco_apresentacao": "shopping beira mar florianopolis",
+    "horario_inicio": "2024-04-01T20:00:00",
+    "imagem_artista": "link_para_imagem_sza.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=Sv5yCzPCkv8&list=RDEMS7oOss8hz5bWLpxbKtxsNQ&start_radio=1",
+    "link_site": "https://www.sza.com",
+    "valor_ingresso": 50.00,
+    "link_compra_ingresso": "https://www.ticket.com/sza",
+    "telefone": "+1 123-456-7890"
+  },
+  {
+    "nome": "Gilberto Gil",
+    "endereco_apresentacao": "Moochacho",
+    "horario_inicio": "2024-04-02T19:30:00",
+    "imagem_artista": "link_para_imagem_gilberto_gil.jpg",
+    "link_playlist": "link_para_playlist_gilberto_gil",
+    "link_site": "https://www.gilbertogil.com",
+    "valor_ingresso": 60.00,
+    "link_compra_ingresso": "https://www.ticket.com/gilberto_gil",
+    "telefone": "+1 987-654-3210"
+  },
+  {
+    "nome": "Hozier",
+    "endereco_apresentacao": "avenida atlantica balneario camboriu",
+    "horario_inicio": "2024-04-03T21:00:00",
+    "imagem_artista": "link_para_imagem_hozier.jpg",
+    "link_playlist": "link_para_playlist_hozier",
+    "link_site": "https://www.hozier.com",
+    "valor_ingresso": 55.00,
+    "link_compra_ingresso": "https://www.ticket.com/hozier",
+    "telefone": "+1 234-567-8901"
+  },
+  {
+    "nome": "Sam Smith",
+    "endereco_apresentacao": "itapema",
+    "horario_inicio": "2024-04-04T22:00:00",
+    "imagem_artista": "link_para_imagem_sam_smith.jpg",
+    "link_playlist": "link_para_playlist_sam_smith",
+    "link_site": "https://www.samsmithworld.com",
+    "valor_ingresso": 65.00,
+    "link_compra_ingresso": "https://www.ticket.com/sam_smith",
+    "telefone": "+1 345-678-9012"
+  },
+  {
+    "nome": "Lady Gaga",
+    "endereco_apresentacao": "Tijucas",
+    "horario_inicio": "2024-04-05T20:30:00",
+    "imagem_artista": "link_para_imagem_lady_gaga.jpg",
+    "link_playlist": "link_para_playlist_lady_gaga",
+    "link_site": "https://www.ladygaga.com",
+    "valor_ingresso": 70.00,
+    "link_compra_ingresso": "https://www.ticket.com/lady_gaga",
+    "telefone": "+1 456-789-0123"
+  },
+  {
+    "nome": "Madonna",
+    "endereco_apresentacao": "Bombinhas",
+    "horario_inicio": "2024-04-06T19:00:00",
+    "imagem_artista": "link_para_imagem_madonna.jpg",
+    "link_playlist": "link_para_playlist_madonna",
+    "link_site": "https://www.madonna.com",
+    "valor_ingresso": 75.00,
+    "link_compra_ingresso": "https://www.ticket.com/madonna",
+    "telefone": "+1 567-890-1234"
+  }
+]
   
