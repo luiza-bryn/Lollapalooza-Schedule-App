@@ -19,9 +19,6 @@ export default function HomeScreen({ navigation }) {
       <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(0, 175, 154)' }]} onPress={() => navigation.navigate('ScheduleList')}>
         <Text style={styles.buttonText}>Atrações</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(245, 54, 34)' }]} onPress={() => navigation.navigate('FavoritesList') }>
-        <Text style={styles.buttonText}>Favoritos</Text>
-      </TouchableOpacity>
     </ImageBackground>
   );
 }
