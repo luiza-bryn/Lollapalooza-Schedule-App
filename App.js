@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import ScheduleDetailsScreen from './ScheduleDetails'
 import ScheduleListScreen from './ScheduleList'
 import HomeScreen from './Home'
-// import FavoritesListScreen from './FavoritesList'
+import FavoritesListScreen from './FavoritesList'
 
 const Stack = createNativeStackNavigator();
 
@@ -16,23 +16,22 @@ export default function App() {
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="ScheduleList" component={ScheduleListScreen} />
     <Stack.Screen name="ScheduleDetails" component={ScheduleDetailsScreen} />
-    {/* <Stack.Screen name="FavoritesList" component={FavoritesListScreen} /> */}
+    <Stack.Screen name="FavoritesList" component={FavoritesListScreen} />
      </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+  flex: 1,
+  justifyContent: 'center',
+  backgroundColor: '#ecf0f1',
+  padding: 8,
   },
   paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
+  margin: 24,
+  fontSize: 18,
+  fontWeight: 'bold',
+  textAlign: 'center',
   },
 });

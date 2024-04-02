@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button, ActivityIndicator, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import jsonData from './assets/dados.json';
 
 export default function ScheduleListScreen({ navigation }) {
@@ -14,6 +15,16 @@ export default function ScheduleListScreen({ navigation }) {
     }, 2000);
   }, []);
 
+  // Função para alternar o estado de favorito para um show
+  const toggleFavorite = (id) => {
+    setData(data.map(item => {
+      if (item.id === id) {
+        return {...item, favorite: !item.favorite};
+      }
+      return item;
+    }));
+  };
+
   return (
     <>
       {loading ? (
@@ -26,13 +37,20 @@ export default function ScheduleListScreen({ navigation }) {
             data={data}
             renderItem={({ item }) => (
               <TouchableOpacity onPress={() => navigation.navigate('ScheduleDetails', { contact: item })}>
-                <View>
+                <View style={styles.showContainer}>
                   <Text style={styles.contact}>{item.nome}</Text>
+                  <TouchableOpacity onPress={() => toggleFavorite(item.id)}>
+                    <Ionicons
+                      name={item.favorite ? 'star' : 'star-outline'}
+                      size={30}
+                      color={item.favorite ? 'gold' : 'gray'}
+                    />
+                  </TouchableOpacity>
                 </View>
               </TouchableOpacity>
             )}
           />
-          <Button title="Voltar" onPress={() => navigation.navigate('ScheduleList')} />
+          <Button title="Ver Favoritos" onPress={() => navigation.navigate('FavoritesList', { favorites: data.filter(item => item.favorite) })} />
         </View>
       )}
     </>
@@ -40,11 +58,22 @@ export default function ScheduleListScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 15
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  showContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
   },
   contact: {
     fontSize: 18,
     height: 44,
-  }
+  },
 });
