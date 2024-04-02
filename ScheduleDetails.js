@@ -11,44 +11,43 @@ export default function ScheduleListScreen({ route, navigation }) {
     Linking.openURL(url);
   };
 
-  const handleOpenPlaylist = (contact) => {
-    Linking.openURL(contact.link_playlist);
-  };
-
   return (
+    
     <View>
-      <View>
-        <Text style={styles.name}>{contact.nome}</Text>
-
+      <View style={styles.content}>
         <TouchableOpacity onPress={() => handleGetDirections(contact)} style={styles.addressContainer}>
           <Image source={require('./assets/localizacao.png')} style={styles.icon} />
           <Text style={styles.endereco}>{contact.endereco_apresentacao}</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => handleOpenPlaylist(contact)}>
-          <Text style={styles.playlist}>{contact.link_playlist}</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.resto}>{contact.link_site}</Text>
-
-        <Text style={styles.resto}>{contact.valor_ingresso}</Text>
-
-        <Text style={styles.resto}>{contact.link_compra_ingresso}</Text>
-        </View>
-        <View style={styles.button} >
-        <Button onPress={() => Linking.openURL(`tel:${contact.telefone}`) }
-          title="Ligar" />
-        </View>
-      
-      <View style={styles.button} >
-        <Button
-          title="Voltar"
-          onPress={() => navigation.navigate("ScheduleList")}
-        />
       </View>
+
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(0, 175, 154)' }]} onPress={() => Linking.openURL(`tel:${contact.telefone}`)}>
+      <Text style={styles.buttonText}>Telefone</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => Linking.openURL(contact.redes_sociais)}>
+      <Text style={styles.buttonText}>Redes sociais do artista</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(0, 175, 154)' }]} onPress={() => Linking.openURL(contact.link_compra_ingresso)}>
+        <Text style={styles.buttonText}>Comprar ingresso</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => Linking.openURL(contact.link_site)}>
+      <Text style={styles.buttonText}>Site do artista</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(0, 175, 154)' }]} onPress={() => Linking.openURL(contact.link_playlist)}>
+      <Text style={styles.buttonText}>Video do artista</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => navigation.navigate("ScheduleList")}>
+      <Text style={styles.buttonText}>voltar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -57,36 +56,52 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 25,
     height: 44,
-    color: "red",
     textAlign: 'center',
     marginTop: 20, 
     marginBottom: 20, 
   },
-  resto: {
-    fontSize: 18,
-    height: 44,
-    color: "blue",
-  },
   endereco: {
     fontSize: 18,
-    height: 44,
-    color: "yellow",
   },
   playlist: {
     fontSize: 18,
     height: 44,
-    color: "green",
   },
   button: {
-    padding: 15
+    padding: 15,
+    width: '30%',
+    alignSelf: 'center',
+    marginBottom: 10,
+    
   },
   addressContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   icon: {
-    width: 40, // Defina o tamanho desejado da imagem
-    height: 40, // Defina o tamanho desejado da imagem
-    marginRight: 10, // Espaço entre a imagem e o texto do endereço
+    width: 40, 
+    height: 40, 
+    marginRight: 10, 
+    marginLeft: 10,
+    marginBottom: 10,
+    
+  },
+  content: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 10
+  },
+  text: {
+    fontSize: 16,
+    marginLeft: 10, // Adiciona espaço entre a imagem e o texto
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    alignSelf: 'center'
+  },
+  teste: {
+    alignItems: 'center',
   }
 });

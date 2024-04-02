@@ -5,12 +5,14 @@
     "endereco_apresentacao": "shopping beira mar florianopolis",
     "data": "01-04-2024",
     "horario": "19:30",
-    "imagem_artista": "link_para_imagem_sza.jpg",
-    "link_playlist": "https://www.youtube.com/watch?v=Sv5yCzPCkv8&list=RDEMS7oOss8hz5bWLpxbKtxsNQ&start_radio=1",
-    "link_site": "https://www.sza.com",
+    "imagem_artista": "sza.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 50.00,
-    "link_compra_ingresso": "https://www.ticket.com/sza",
-    "telefone": "+1 123-456-7890"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 123-456-7890",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
+
   },
   {
     "id": "2",
@@ -18,12 +20,13 @@
     "endereco_apresentacao": "Moochacho",
     "data": "01-04-2024",
     "horario": "18:00",
-    "imagem_artista": "link_para_imagem_gilberto_gil.jpg",
-    "link_playlist": "link_para_playlist_gilberto_gil",
-    "link_site": "https://www.gilbertogil.com",
+    "imagem_artista": "gilberto_gil.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 60.00,
-    "link_compra_ingresso": "https://www.ticket.com/gilberto_gil",
-    "telefone": "+1 987-654-3210"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 987-654-3210",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
   },
   {
     "id": "3",
@@ -31,12 +34,13 @@
     "endereco_apresentacao": "avenida atlantica balneario camboriu",
     "data": "01-04-2024",
     "horario": "17:30",
-    "imagem_artista": "link_para_imagem_hozier.jpg",
-    "link_playlist": "link_para_playlist_hozier",
-    "link_site": "https://www.hozier.com",
+    "imagem_artista": "hozier.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 55.00,
-    "link_compra_ingresso": "https://www.ticket.com/hozier",
-    "telefone": "+1 234-567-8901"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 234-567-8901",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
   },
   {
     "id": "4",
@@ -44,12 +48,13 @@
     "endereco_apresentacao": "itapema",
     "data": "01-04-2024",
     "horario": "20:40",
-    "imagem_artista": "link_para_imagem_sam_smith.jpg",
-    "link_playlist": "link_para_playlist_sam_smith",
-    "link_site": "https://www.samsmithworld.com",
+    "imagem_artista": "sam_smith.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 65.00,
-    "link_compra_ingresso": "https://www.ticket.com/sam_smith",
-    "telefone": "+1 345-678-9012"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 345-678-9012",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
   },
   {
     "id": "5",
@@ -57,12 +62,13 @@
     "endereco_apresentacao": "Tijucas",
     "data": "02-04-2024",
     "horario": "18:00",
-    "imagem_artista": "link_para_imagem_lady_gaga.jpg",
-    "link_playlist": "link_para_playlist_lady_gaga",
-    "link_site": "https://www.ladygaga.com",
+    "imagem_artista": "lady_gaga.jpg",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 70.00,
-    "link_compra_ingresso": "https://www.ticket.com/lady_gaga",
-    "telefone": "+1 456-789-0123"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 456-789-0123",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
   },
   {
     "id": "6",
@@ -71,11 +77,12 @@
     "data": "02-04-2024",
     "horario": "19:30",
     "imagem_artista": "link_para_imagem_madonna.jpg",
-    "link_playlist": "link_para_playlist_madonna",
-    "link_site": "https://www.madonna.com",
+    "link_playlist": "https://www.youtube.com/watch?v=2p3zZoraK9g",
+    "link_site": "https://ufsc.br/",
     "valor_ingresso": 75.00,
-    "link_compra_ingresso": "https://www.ticket.com/madonna",
-    "telefone": "+1 567-890-1234"
+    "link_compra_ingresso": "https://ufsc.br/",
+    "telefone": "+1 567-890-1234",
+    "redes_sociais": "https://www.instagram.com/larissa.slomski/"
   }
 ]
   
