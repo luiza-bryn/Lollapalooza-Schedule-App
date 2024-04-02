@@ -25,7 +25,7 @@ export default function ScheduleListScreen({ navigation }) {
           <FlatList
             data={data}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => navigation.navigate('ScheduleList', { contact: item })}>
+              <TouchableOpacity onPress={() => navigation.navigate('ScheduleDetails', { contact: item })}>
                 <View>
                   <Text style={styles.contact}>{item.nome}</Text>
                 </View>
