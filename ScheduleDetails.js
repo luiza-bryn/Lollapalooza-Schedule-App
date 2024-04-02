@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Button, Linking } from "react-native";
+import { Text, View, StyleSheet, Button, Linking, Image } from "react-native";
 import { Platform } from "react-native";
-import { TouchableOpacity, Image } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 export default function ScheduleListScreen({ route, navigation }) {
   const { contact } = route.params;
@@ -20,7 +20,8 @@ export default function ScheduleListScreen({ route, navigation }) {
       <View>
         <Text style={styles.name}>{contact.nome}</Text>
 
-        <TouchableOpacity onPress={() => handleGetDirections(contact)}>
+        <TouchableOpacity onPress={() => handleGetDirections(contact)} style={styles.addressContainer}>
+          <Image source={require('./assets/localizacao.png')} style={styles.icon} />
           <Text style={styles.endereco}>{contact.endereco_apresentacao}</Text>
         </TouchableOpacity>
 
@@ -33,10 +34,13 @@ export default function ScheduleListScreen({ route, navigation }) {
         <Text style={styles.resto}>{contact.valor_ingresso}</Text>
 
         <Text style={styles.resto}>{contact.link_compra_ingresso}</Text>
-
-        <Text style={styles.resto}>{contact.telefone}</Text>
-      </View>
-      <View>
+        </View>
+        <View style={styles.button} >
+        <Button onPress={() => Linking.openURL(`tel:${contact.telefone}`) }
+          title="Ligar" />
+        </View>
+      
+      <View style={styles.button} >
         <Button
           title="Voltar"
           onPress={() => navigation.navigate("ScheduleList")}
@@ -54,6 +58,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     height: 44,
     color: "red",
+    textAlign: 'center',
+    marginTop: 20, 
+    marginBottom: 20, 
   },
   resto: {
     fontSize: 18,
@@ -70,4 +77,16 @@ const styles = StyleSheet.create({
     height: 44,
     color: "green",
   },
+  button: {
+    padding: 15
+  },
+  addressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    width: 40, // Defina o tamanho desejado da imagem
+    height: 40, // Defina o tamanho desejado da imagem
+    marginRight: 10, // Espaço entre a imagem e o texto do endereço
+  }
 });
