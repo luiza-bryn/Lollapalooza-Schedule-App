@@ -11,9 +11,17 @@ export default function ScheduleListScreen({ route, navigation }) {
     Linking.openURL(url);
   };
 
+  const images = {1: require('./assets/sza.jpg'), 2: require('./assets/gilberto_gil.jpg'), 3: require('./assets/hozier.jpeg'), 4: require('./assets/sam_smith.jpg'), 5: require('./assets/lady_gaga.jpeg'), 6: require('./assets/beyonce.jpeg')}
+
   return (
     
     <View>
+      <Text style={styles.name}>{contact.nome}</Text>
+      
+
+      <Image source={ images[contact.id] } />
+
+      <Text style={styles.contactDetails}>Valor do ingresso: R${contact.valor_ingresso},00</Text>
       <View style={styles.content}>
         <TouchableOpacity onPress={() => handleGetDirections(contact)} style={styles.addressContainer}>
           <Image source={require('./assets/localizacao.png')} style={styles.icon} />
@@ -69,7 +77,7 @@ const styles = StyleSheet.create({
   },
   button: {
     padding: 15,
-    width: '30%',
+    width: '100%',
     alignSelf: 'center',
     marginBottom: 10,
     
