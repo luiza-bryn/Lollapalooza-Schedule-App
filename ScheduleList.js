@@ -51,6 +51,9 @@ export default function ScheduleListScreen({ navigation }) {
             )}
           />
           <Button title="Ver Favoritos" onPress={() => navigation.navigate('FavoritesList', { favorites: data.filter(item => item.favorite) })} />
+        <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => navigation.navigate("Home")}>
+       <Text style={styles.buttonText}>voltar</Text>
+       </TouchableOpacity>
         </View>
       )}
     </>
@@ -76,4 +79,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 44,
   },
+  button: {
+    padding: 15,
+    width: '100%',
+    alignSelf: 'center',
+    marginBottom: 10,
+    
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    alignSelf: 'center'
+  }
 });

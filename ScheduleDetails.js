@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Button, Linking, Image } from "react-native";
+import { Text, View, StyleSheet, Button, Linking, Image, ScrollView } from "react-native";
 import { Platform } from "react-native";
 import { TouchableOpacity } from "react-native";
 
@@ -15,13 +15,21 @@ export default function ScheduleListScreen({ route, navigation }) {
 
   return (
     
-    <View>
+    <ScrollView>
       <Text style={styles.name}>{contact.nome}</Text>
       
 
-      <Image source={ images[contact.id] } />
+      <Image source={ images[contact.id] }  style={styles.imagem_artista} />
 
-      <Text style={styles.contactDetails}>Valor do ingresso: R${contact.valor_ingresso},00</Text>
+      
+      <View style={styles.content}>
+      <Image source={require('./assets/valor.png')} style={styles.icon} />
+        <Text style={styles.contactDetails}>Valor do ingresso: R${contact.valor_ingresso},00</Text>
+      </View>
+      <View style={styles.content}>
+      <Image source={require('./assets/relogio.png')} style={styles.icon} />
+        <Text style={styles.contactDetails}>Horário da apresentação: {contact.horario}</Text>
+      </View>
       <View style={styles.content}>
         <TouchableOpacity onPress={() => handleGetDirections(contact)} style={styles.addressContainer}>
           <Image source={require('./assets/localizacao.png')} style={styles.icon} />
@@ -49,10 +57,10 @@ export default function ScheduleListScreen({ route, navigation }) {
       <Text style={styles.buttonText}>Video do artista</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => navigation.navigate("ScheduleList")}>
-      <Text style={styles.buttonText}>voltar</Text>
-      </TouchableOpacity>
-    </View>
+       <TouchableOpacity style={[styles.button, { backgroundColor: 'rgb(255, 68, 56)' }]} onPress={() => navigation.navigate("ScheduleList")}>
+       <Text style={styles.buttonText}>voltar</Text>
+       </TouchableOpacity>
+    </ScrollView>
   );
 }
 
@@ -111,5 +119,10 @@ const styles = StyleSheet.create({
   },
   teste: {
     alignItems: 'center',
+  },
+  imagem_artista: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
   }
 });
